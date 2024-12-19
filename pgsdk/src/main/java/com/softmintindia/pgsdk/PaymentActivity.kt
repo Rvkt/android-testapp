@@ -496,7 +496,7 @@ fun ButtonList(visibleButtons: List<String>) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2), // 2 buttons per row
         modifier = Modifier.fillMaxWidth(),
-        contentPadding = PaddingValues(8.dp)
+        contentPadding = PaddingValues(4.dp)
     ) {
         items(visibleButtons) { button ->
             Button(
@@ -510,14 +510,14 @@ fun ButtonList(visibleButtons: List<String>) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(vertical = 8.dp),
+                        .padding(vertical = 4.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     // Replace with actual icons for each button
                     Image(
                         painter = painterResource(id = R.drawable.ic_googlepay), // Replace with dynamic icons
                         contentDescription = "App Icon",
-                        modifier = Modifier.size(16.dp)
+                        modifier = Modifier.size(8.dp)
                     )
                     Spacer(modifier = Modifier.width(12.dp))
 
@@ -529,6 +529,7 @@ fun ButtonList(visibleButtons: List<String>) {
                         color = Color(0xFF5C6BC0),
                         modifier = Modifier.weight(1f)
                     )
+
 
                     // Right Arrow Icon
                     Icon(

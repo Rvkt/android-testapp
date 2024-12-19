@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.softmintindia.pgsdk">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+
+    <application
+        android:label="PGSDP"
+        android:icon="@mipmap/ic_launcher">
+
+        <!-- Declare activities, services, receivers specific to the module -->
+        <activity
+            android:name=".PaymentActivity"
+            android:label="Module Activity"
+            android:theme="@style/Theme.AppCompat"
+            android:exported="true">
+        </activity>
+
+        <!-- Optionally include intent filters or permissions specific to this module -->
+        <!--<intent-filter>
+            <action android:name="com.yourapp.MODULE_ACTION" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>-->
+
+        <meta-data
+            android:name="com.google.android.feature"
+            android:value="com.softmintindia.pgsdk" />
+
+
+    </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="upi" />
+        </intent>
+
+        <package android:name="in.amazon.mShop.android.shopping" />
+        <package android:name="com.upi.axispay" />
+        <package android:name="com.bankofbaroda.upi" />
+        <package android:name="in.org.npci.upiapp" />
+        <package android:name="com.infrasofttech.centralbankupi" />
+        <package android:name="com.boi.ua.android" />
+        <package android:name="com.lcode.csbupi" />
+        <package android:name="com.cub.wallet.gui" />
+        <package android:name="com.dbs.in.digitalbank" />
+        <package android:name="com.equitasbank.upi" />
+        <package android:name="com.freecharge.android" />
+        <package android:name="com.google.android.apps.nbu.paisa.user" />
+        <package android:name="com.mgs.hsbcupi" />
+        <package android:name="com.csam.icici.bank.imobile" />
+        <package android:name="com.mgs.induspsp" />
+        <package android:name="com.lcode.smartz" />
+        <package android:name="com.khaalijeb.inkdrops" />
+        <package android:name="com.msf.kbank.mobile" />
+        <package android:name="com.mobikwik_new" />
+        <package android:name="net.one97.paytm" />
+        <package android:name="com.phonepe.app" />
+        <package android:name="com.sbi.upi" />
+        <package android:name="com.YesBank" />
+        <package android:name="com.yesbank.yespaynext" />
+        <package android:name="com.naviapp" />
+        <package android:name="com.dreamplug.androidapp" />
+        <package android:name="com.phonepe.app.business" />
+        <package android:name="money.super.payments" />
+        <package android:name="com.sbi.lotusintouch" />
+        <package android:name="com.snapwork.hdfc" />
+        <package android:name="com.hdfcbank.payzapp" />
+        <package android:name="com.idfcfirstbank.optimus" />
+        <package android:name="com.bankofbaroda.mconnect" />
+        <package android:name="com.axis.mobile" />
+        <package android:name="com.nextbillion.groww" />
+        <package android:name="com.myairtelapp" />
+        <package android:name="com.fss.indus" />
+        <package android:name="org.altruist.BajajExperia" />
+    </queries>
+
+</manifest>
